@@ -6,6 +6,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 Make sure to install the dependencies:
 
+npm install vue3-markdown-it highlight.js
+
 ```bash
 # npm
 npm install

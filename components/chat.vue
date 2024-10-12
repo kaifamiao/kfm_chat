@@ -1,17 +1,20 @@
 <!-- components/chat.vue -->
 <template>
 
-      <div :class="['chat-message', message.role]">
-        <userinput v-if="message.role === 'user'" :content="message.content" />
-        <assistant v-else :content="message.content" />
-      </div>
+     <div>
+       <div :class="['chat-message', message.role]">
+         <usermessage v-if="message.role === 'user'" :content="message.content" />
+         <assistant v-else :content="message.content" />
+       </div>
 
+     </div>
 
 </template>
 
 <script setup>
-import UserInput from './userinput.vue'
+import UserInput from './usermessage.vue'
 import Assistant from './assistant.vue'
+import Usermessage from "~/components/usermessage.vue";
 
 const props = defineProps({
   message: {
@@ -26,19 +29,10 @@ const props = defineProps({
 }
 .chat-message.user {
   text-align: right;
+
 }
 .chat-message.assistant {
   text-align: left;
-}
-.scroll-container {
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.scroll-content {
-  display: flex;
-  flex-direction: column;
 }
 
 </style>

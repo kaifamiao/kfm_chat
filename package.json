@@ -12,9 +12,12 @@
   "dependencies": {
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "@pinia/nuxt": "^0.5.5",
+    "highlight.js": "^11.10.0",
+    "markdown-it": "^14.1.0",
     "nuxt": "^3.13.0",
     "pinia-plugin-persistedstate": "^4.1.1",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue3-markdown-it": "^1.0.10"
   }
 }

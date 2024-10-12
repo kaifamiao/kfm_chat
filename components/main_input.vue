@@ -15,7 +15,17 @@
       ></textarea>
       <button class="send-button" @click="sendMessage" :disabled="!userInput.trim()">
         <!-- 您可以使用 SVG 图标，这里简化为文字 -->
-        发送
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+              d="M2 21L23 12L2 3V10L17 12L2 14V21Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -86,11 +96,16 @@ const sendMessage = () => {
 </script>
 <style scoped>
 .input-container {
+  position: sticky; /* 使用 sticky 而不是 fixed */
   display: flex;
   align-items: center;
   padding: 10px;
+  background-color: #ffffff;
 
 
+}
+select-list{
+  color: #3873ff;
 }
 textarea {
   flex: 1;
@@ -98,8 +113,7 @@ textarea {
   margin: 0 10px;
 }
 button {
-  padding: 10px 20px;
-  background-color: #3873ff;
-  color: #f1f0f0;
+
+  color: #3873ff;
 }
 </style>
